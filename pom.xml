@@ -27,7 +27,7 @@
     <jacoco.argLine/>
 
     <!-- Plugin Versions -->
-    <plugin.jacoco>0.8.12</plugin.jacoco>
+    <plugin.jacoco>0.8.15</plugin.jacoco>
     <plugin.maven-dependency>3.8.1</plugin.maven-dependency>
     <plugin.maven-jar>3.4.2</plugin.maven-jar>
     <plugin.maven-surefire>3.5.3</plugin.maven-surefire>

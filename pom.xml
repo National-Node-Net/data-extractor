@@ -47,7 +47,7 @@
 
     <!-- Test -->
     <dependency.junit-jupiter>5.12.1</dependency.junit-jupiter>
-    <dependency.mockito>5.16.1</dependency.mockito>
+    <dependency.mockito>5.23.0</dependency.mockito>
     <dependency.mockwebserver>4.12.0</dependency.mockwebserver>
     <dependency.s3mock>3.12.0</dependency.s3mock>
   </properties>

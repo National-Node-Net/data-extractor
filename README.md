@@ -13,7 +13,7 @@ This repository contributes to the development of **secure, scalable, and intero
 
 This repository is one of several open-source components that underpin NDTP’s **Integration Architecture (IA)**—a framework designed to allow organisations to manage and exchange data securely while maintaining control over their own information. The IA is actively deployed and tested across multiple sectors, ensuring its adaptability and alignment with real-world needs.
 
-For a complete overview of the Integration Architecture (IA) project, please see the [Integration Architecture Documentation](https://github.com/National-Digital-Twin/integration-architecture-documentation).
+For a complete overview of the Integration Architecture (IA) project, please see the [Integration Architecture Documentation](https://github.com/National-Node-Net/integration-architecture-documentation).
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Before using this repository, ensure you have the following dependencies install
 * **System Requirements:**
   * Java 21
   * Docker
-  * [Secure Agent Graph](https://github.com/National-Digital-Twin/secure-agent-graph)
+  * [Secure Agent Graph](https://github.com/National-Node-Net/secure-agent-graph)
   * Identity provider (see the [current supported providers](./INSTALLATION.md#identity-providers))
   * Data Dumping Destination (see the [current supported destinations](./INSTALLATION.md#data-dumping))
 
@@ -40,7 +40,7 @@ Follow these steps to get started quickly with this repository. For detailed ins
 ### 1. Download and Build
 
 ```sh
-git clone https://github.com/National-Digital-Twin/data-extractor.git  
+git clone https://github.com/National-Node-Net/data-extractor.git  
 cd data-extractor
 ```
 

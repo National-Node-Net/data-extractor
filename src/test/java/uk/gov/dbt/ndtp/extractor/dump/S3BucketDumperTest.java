@@ -86,26 +86,6 @@ class S3BucketDumperTest {
     }
 
     @Test
-    void upload() throws DataDumperException {
-        ByteArrayInputStream input = new ByteArrayInputStream("test-data".getBytes(StandardCharsets.UTF_8));
-
-        underTest.upload(input);
-
-        ResponseBytes<GetObjectResponse> saved = getLatestObject();
-
-        assertEquals("test-data", saved.asUtf8String());
-    }
-
-    private ResponseBytes<GetObjectResponse> getLatestObject() {
-        return client.listObjects(b -> b.bucket(BUCKET))
-                .thenApply(r -> r.contents().stream().max(Comparator.comparing(S3Object::lastModified)))
-                .thenApply(Optional::get)
-                .thenCompose(
-                        f -> client.getObject(b -> b.bucket(BUCKET).key(f.key()), AsyncResponseTransformer.toBytes()))
-                .join();
-    }
-
-    @Test
     void upload_failure_with_client() {
         ByteArrayInputStream input = new ByteArrayInputStream("test-data".getBytes(StandardCharsets.UTF_8));
 

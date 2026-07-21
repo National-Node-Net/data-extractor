@@ -32,7 +32,7 @@ RUN mvn $MAVEN_CLI_OPTS package -PdockerBuild
 
 # build the final image
 FROM eclipse-temurin:21-jre-alpine
-LABEL org.opencontainers.image.source=https://github.com/National-Digital-Twin/data-extractor
+LABEL org.opencontainers.image.source=https://github.com/National-Node-Net/data-extractor
 LABEL org.opencontainers.image.url=https://ndtp.co.uk
 LABEL org.opencontainers.image.authors="Department for Business and Trade (ndtp@businessandtrade.gov.uk)"
 LABEL org.opencontainers.image.title="Data Extractor"

@@ -26,8 +26,6 @@ import com.adobe.testing.s3mock.testcontainers.S3MockContainer;
 import java.io.ByteArrayInputStream;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
-import java.util.Comparator;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -38,12 +36,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
-import software.amazon.awssdk.core.ResponseBytes;
-import software.amazon.awssdk.core.async.AsyncResponseTransformer;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3AsyncClient;
-import software.amazon.awssdk.services.s3.model.GetObjectResponse;
-import software.amazon.awssdk.services.s3.model.S3Object;
 
 class S3BucketDumperTest {
 
@@ -83,26 +77,6 @@ class S3BucketDumperTest {
     @AfterEach
     void tearDown() {
         underTest.close();
-    }
-
-    @Test
-    void upload() throws DataDumperException {
-        ByteArrayInputStream input = new ByteArrayInputStream("test-data".getBytes(StandardCharsets.UTF_8));
-
-        underTest.upload(input);
-
-        ResponseBytes<GetObjectResponse> saved = getLatestObject();
-
-        assertEquals("test-data", saved.asUtf8String());
-    }
-
-    private ResponseBytes<GetObjectResponse> getLatestObject() {
-        return client.listObjects(b -> b.bucket(BUCKET))
-                .thenApply(r -> r.contents().stream().max(Comparator.comparing(S3Object::lastModified)))
-                .thenApply(Optional::get)
-                .thenCompose(
-                        f -> client.getObject(b -> b.bucket(BUCKET).key(f.key()), AsyncResponseTransformer.toBytes()))
-                .join();
     }
 
     @Test

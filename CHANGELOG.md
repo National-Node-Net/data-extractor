@@ -20,19 +20,10 @@ This project follows **Semantic Versioning (SemVer)** ([semver.org](https://semv
 
 ---
 
-## [Unreleased]
-
-### Added
-
-- Placeholder for upcoming features and enhancements.
-
-### Fixed
-
-- Placeholder for bug fixes and security updates.
+## [0.90.4] – 2026-07-16
 
 ### Changed
-
-- Updated MAINTAINERS.md with updated supplier information.
+- Alignment of GitHub actions to new organisation.
 
 ---
 

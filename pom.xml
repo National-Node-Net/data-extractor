@@ -16,9 +16,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:National-Digital-Twin/data-extractor.git</connection>
-    <developerConnection>scm:git:git@github.com:National-Digital-Twin/data-extractor.git</developerConnection>
-    <url>https://github.com/National-Digital-Twin/data-extractor</url>
+    <connection>scm:git:git@github.com:National-Node-Net/data-extractor.git</connection>
+    <developerConnection>scm:git:git@github.com:National-Node-Net/data-extractor.git</developerConnection>
+    <url>https://github.com/National-Node-Net/data-extractor</url>
   </scm>
 
   <properties>

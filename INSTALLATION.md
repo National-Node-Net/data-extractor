@@ -24,7 +24,7 @@ To build this application via Java run the following
 To build this application via Docker run the following
 
 ```sh
-docker build -t national-digital-twin/data-extractor -f Dockerfile .
+docker build -t national-node-net/data-extractor -f Dockerfile .
 ```
 
 ## Running
@@ -34,7 +34,7 @@ docker build -t national-digital-twin/data-extractor -f Dockerfile .
 We need the following components to be configured or running.
 
 - [Identity Provider](#identity-providers)
-- [Secure Agent](https://github.com/National-Digital-Twin/secure-agent-graph)
+- [Secure Agent](https://github.com/National-Node-Net/secure-agent-graph)
 - [Data Dumping Destination](#data-dumping)
 
 #### Identity Providers
@@ -43,9 +43,9 @@ The current supported Identity Providers are:
 * Cognito
 * Keycloak
 
-A compose file is provided as part of [IA Node Access](https://github.com/National-Digital-Twin/ianode-access) which contains a local setup with test users
-- [Keycloak](https://github.com/National-Digital-Twin/ianode-access/tree/pre/keyclock-local)
-- [Cognito-Local](https://github.com/National-Digital-Twin/ianode-access/tree/pre/cognito-local)
+A compose file is provided as part of [IA Node Access](https://github.com/National-Node-Net/ianode-access) which contains a local setup with test users
+- [Keycloak](https://github.com/National-Node-Net/ianode-access/tree/pre/keyclock-local)
+- [Cognito-Local](https://github.com/National-Node-Net/ianode-access/tree/pre/cognito-local)
 
 #### Data Dumping
 

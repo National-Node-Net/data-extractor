@@ -38,7 +38,7 @@
     <!-- Dependency Versions -->
     <!-- External -->
     <dependency.avaje>4.0</dependency.avaje>
-    <dependency.aws>2.31.12</dependency.aws>
+    <dependency.aws>2.47.5</dependency.aws>
     <dependency.aws-crt>0.37.0</dependency.aws-crt>
     <dependency.junit-jupiter>5.12.1</dependency.junit-jupiter>
     <dependency.logback>1.5.18</dependency.logback>

@@ -43,7 +43,7 @@
     <dependency.junit-jupiter>5.12.1</dependency.junit-jupiter>
     <dependency.logback>1.5.18</dependency.logback>
     <dependency.slf4j>2.0.17</dependency.slf4j>
-    <dependency.jackson-core-databind>2.18.3</dependency.jackson-core-databind>
+    <dependency.jackson-core-databind>2.18.9</dependency.jackson-core-databind>
 
     <!-- Test -->
     <dependency.junit-jupiter>5.12.1</dependency.junit-jupiter>

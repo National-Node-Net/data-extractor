@@ -40,7 +40,7 @@
     <dependency.avaje>4.0</dependency.avaje>
     <dependency.aws>2.31.12</dependency.aws>
     <dependency.aws-crt>0.37.0</dependency.aws-crt>
-    <dependency.junit-jupiter>5.12.1</dependency.junit-jupiter>
+    <dependency.junit-jupiter>6.1.2</dependency.junit-jupiter>
     <dependency.logback>1.5.18</dependency.logback>
     <dependency.slf4j>2.0.17</dependency.slf4j>
     <dependency.jackson-core-databind>2.18.3</dependency.jackson-core-databind>

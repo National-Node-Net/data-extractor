@@ -1,0 +1,26 @@
+name: Notify Dev Team on develop push
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Dev Team via Power Automate
+        run: |
+          curl -X POST "${{ secrets.DEV_MERGE_TEAMS_URL}}" \
+               -H "Content-Type: application/json" \
+               -d @- <<EOF
+          {
+            "repository": "${{ github.repository }}",
+            "ref": "${{ github.ref }}",
+            "pusher": {
+              "name": "${{ github.actor }}"
+            },
+            "head_commit": {
+              "message": "${{ github.event.head_commit.message }}"
+            }
+          }

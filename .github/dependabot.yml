@@ -11,6 +11,10 @@ updates:
     schedule:
       interval: "weekly"
     target-branch: develop
+    groups:
+      maven-dependencies:
+        patterns:
+          - "*"
     commit-message:
       prefix: "chore(deps)"
   # target-branch intentionally omitted: action updates target main (auto-merged) and are back-merged to develop.
@@ -18,5 +22,9 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    groups:
+      github-actions:
+        patterns:
+          - "*"
     commit-message:
       prefix: "chore(deps)"

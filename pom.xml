@@ -37,6 +37,7 @@
 
     <!-- Dependency Versions -->
     <!-- External -->
+
     <dependency.avaje>5.2</dependency.avaje>
     <dependency.aws>2.59.1</dependency.aws>
     <dependency.aws-crt>0.50.0</dependency.aws-crt>

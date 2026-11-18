@@ -24,7 +24,7 @@ To build this application via Java run the following
 To build this application via Docker run the following
 
 ```sh
-docker build -t national-digital-twin/data-extractor -f Dockerfile .
+docker build -t national-node-net/data-extractor -f Dockerfile .
 ```
 
 ## Running
@@ -34,7 +34,7 @@ docker build -t national-digital-twin/data-extractor -f Dockerfile .
 We need the following components to be configured or running.
 
 - [Identity Provider](#identity-providers)
-- [Secure Agent](https://github.com/National-Digital-Twin/secure-agent-graph)
+- [Secure Agent](https://github.com/National-Node-Net/secure-agent-graph)
 - [Data Dumping Destination](#data-dumping)
 
 #### Identity Providers
@@ -43,9 +43,9 @@ The current supported Identity Providers are:
 * Cognito
 * Keycloak
 
-A compose file is provided as part of [IA Node Access](https://github.com/National-Digital-Twin/ianode-access) which contains a local setup with test users
-- [Keycloak](https://github.com/National-Digital-Twin/ianode-access/tree/pre/keyclock-local)
-- [Cognito-Local](https://github.com/National-Digital-Twin/ianode-access/tree/pre/cognito-local)
+A compose file is provided as part of [IA Node Access](https://github.com/National-Node-Net/ianode-access) which contains a local setup with test users
+- [Keycloak](https://github.com/National-Node-Net/ianode-access/tree/pre/keyclock-local)
+- [Cognito-Local](https://github.com/National-Node-Net/ianode-access/tree/pre/cognito-local)
 
 #### Data Dumping
 
@@ -152,4 +152,4 @@ These properties only need setting when `data.dumper` is `s3`
 | `aws.access.key.id`     | The AWS key id                                         |
 | `aws.secret.access.key` | The AWS secret access key                              |
 
-© Crown Copyright 2025. This work has been developed by the National Digital Twin Programme and is legally attributed to the Department for Business and Trade (UK) as the governing entity.
+© Crown Copyright 2026. This work has been developed by the National Digital Twin Programme and is legally attributed to the UK's Department for Business, Innovation, Science and Trade (BIST) as the governing entity.

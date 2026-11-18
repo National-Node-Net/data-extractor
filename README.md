@@ -13,7 +13,7 @@ This repository contributes to the development of **secure, scalable, and intero
 
 This repository is one of several open-source components that underpin NDTP’s **Integration Architecture (IA)**—a framework designed to allow organisations to manage and exchange data securely while maintaining control over their own information. The IA is actively deployed and tested across multiple sectors, ensuring its adaptability and alignment with real-world needs.
 
-For a complete overview of the Integration Architecture (IA) project, please see the [Integration Architecture Documentation](https://github.com/National-Digital-Twin/integration-architecture-documentation).
+For a complete overview of the Integration Architecture (IA) project, please see the [Integration Architecture Documentation](https://github.com/National-Node-Net/integration-architecture-documentation).
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Before using this repository, ensure you have the following dependencies install
 * **System Requirements:**
   * Java 21
   * Docker
-  * [Secure Agent Graph](https://github.com/National-Digital-Twin/secure-agent-graph)
+  * [Secure Agent Graph](https://github.com/National-Node-Net/secure-agent-graph)
   * Identity provider (see the [current supported providers](./INSTALLATION.md#identity-providers))
   * Data Dumping Destination (see the [current supported destinations](./INSTALLATION.md#data-dumping))
 
@@ -40,7 +40,7 @@ Follow these steps to get started quickly with this repository. For detailed ins
 ### 1. Download and Build
 
 ```sh
-git clone https://github.com/National-Digital-Twin/data-extractor.git  
+git clone https://github.com/National-Node-Net/data-extractor.git  
 cd data-extractor
 ```
 
@@ -65,6 +65,12 @@ The data extractor process consists of three parts:
 - Acquiring an authentication token from an Identity Provider
 - A SPAQRL query to the Secure Agent for data
 - The option of uploading the results to an AWS S3 bucket
+
+## Testing Guide
+
+### Running Unit Tests
+
+Navigate to the root of the project and run `mvn test` to run the tests for the repository.
 
 ## Public Funding Acknowledgment
 
@@ -96,4 +102,4 @@ For questions or support, check our Issues or contact the NDTP team on ndtp@busi
 
 **Maintained by the National Digital Twin Programme (NDTP).**
 
-© Crown Copyright 2025. This work has been developed by the National Digital Twin Programme and is legally attributed to the Department for Business and Trade (UK) as the governing entity.
+© Crown Copyright 2026. This work has been developed by the National Digital Twin Programme and is legally attributed to the UK's Department for Business, Innovation, Science and Trade (BIST) as the governing entity.

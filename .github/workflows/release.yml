@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: Apache-2.0
+# © Crown Copyright 2026. This work has been developed by the National Digital Twin Programme and is legally attributed to the UK's Department for Business, Innovation, Science and Trade (BIST) as the governing entity.
+
 name: Publish to GHCR
 
 on:
@@ -15,9 +18,9 @@ jobs:
       MAVEN_CLI_OPTS: "--batch-mode --no-transfer-progress"
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Setup Java/Maven
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
         with:
           java-version: 21
           distribution: "temurin"
@@ -38,12 +41,12 @@ jobs:
       id-token: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Get repo name
         id: get-repo
         run: echo "docker_repo=${GITHUB_REPOSITORY,,}" >> $GITHUB_OUTPUT
       - name: Login to ghcr.io
-        uses: docker/login-action@v3
+        uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4.6.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -59,54 +62,3 @@ jobs:
         run: |
           docker push ghcr.io/${{ steps.get-repo.outputs.docker_repo }}:${{ needs.verify.outputs.version }}
           docker push ghcr.io/${{ steps.get-repo.outputs.docker_repo }}:latest
-
-  tag:
-    name: Create Git Tag
-    needs:
-      - verify
-      - publish
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Tag commit
-        run: |
-          git config --global user.name "${GITHUB_ACTOR}"
-          git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
-          
-          TAG=v${{ needs.verify.outputs.version }}
-          
-          git tag -a "$TAG" -m "Release $TAG"
-          git push origin "$TAG"
-
-  release-notes:
-    name: Create GitHub Release
-    permissions:
-      contents: write
-    needs:
-      - verify
-      - tag
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print version
-        run: |
-          echo "Creating Release for Version: v${{ needs.verify.outputs.version }}"
-      - name: Generate Release Notes
-        run: |
-          echo "Automated release for version ${{ needs.verify.outputs.version }}.  " > ${{ runner.temp }}/release-notes.txt
-          echo "" >> ${{ runner.temp }}/release-notes.txt
-          echo "See the [changelog](https://github.com/$GITHUB_REPOSITORY/blob/v${{ needs.verify.outputs.version }}/CHANGELOG.md) for what has changed." >> ${{ runner.temp }}/release-notes.txt
-      - name: Create Github Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: "v${{ needs.verify.outputs.version }}"
-          name: "Release v${{ needs.verify.outputs.version }}"
-          body_path: ${{ runner.temp }}/release-notes.txt
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

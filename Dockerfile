@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# © Crown Copyright 2025. This work has been developed by the National Digital Twin Programme and is legally attributed to the Department for Business and Trade (UK) as the governing entity.
+# © Crown Copyright 2026. This work has been developed by the National Digital Twin Programme and is legally attributed to the UK's Department for Business, Innovation, Science and Trade (BIST) as the governing entity.
 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ RUN mvn $MAVEN_CLI_OPTS package -PdockerBuild
 FROM eclipse-temurin:21-jre-alpine
 LABEL org.opencontainers.image.source=https://github.com/National-Node-Net/data-extractor
 LABEL org.opencontainers.image.url=https://ndtp.co.uk
-LABEL org.opencontainers.image.authors="Department for Business and Trade (ndtp@businessandtrade.gov.uk)"
+LABEL org.opencontainers.image.authors="UK Department for Business, Innovation, Science and Trade (BIST) (ndtp@businessandtrade.gov.uk)"
 LABEL org.opencontainers.image.title="Data Extractor"
 LABEL org.opencontainers.image.description="Data Extractor provides an automated approach to running queries against an IA Node for the purpose of data extraction."
 LABEL org.opencontainers.image.licenses="Apache-2.0"

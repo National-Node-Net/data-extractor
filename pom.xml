@@ -27,30 +27,30 @@
     <jacoco.argLine/>
 
     <!-- Plugin Versions -->
-    <plugin.jacoco>0.8.12</plugin.jacoco>
-    <plugin.maven-dependency>3.8.1</plugin.maven-dependency>
-    <plugin.maven-jar>3.4.2</plugin.maven-jar>
-    <plugin.maven-surefire>3.5.3</plugin.maven-surefire>
-    <plugin.spotless>2.44.3</plugin.spotless>
+    <plugin.jacoco>0.8.16</plugin.jacoco>
+    <plugin.maven-dependency>3.11.0</plugin.maven-dependency>
+    <plugin.maven-jar>3.5.1</plugin.maven-jar>
+    <plugin.maven-surefire>3.6.1</plugin.maven-surefire>
+    <plugin.spotless>3.11.0</plugin.spotless>
     <plugin.spotless.gson>2.11.0</plugin.spotless.gson>
     <plugin.spotless.palantir>2.50.0</plugin.spotless.palantir>
 
     <!-- Dependency Versions -->
     <!-- External -->
-    <dependency.avaje>4.0</dependency.avaje>
-    <dependency.aws>2.31.12</dependency.aws>
-    <dependency.aws-crt>0.37.0</dependency.aws-crt>
-    <dependency.junit-jupiter>5.12.1</dependency.junit-jupiter>
-    <dependency.logback>1.5.18</dependency.logback>
-    <dependency.slf4j>2.0.17</dependency.slf4j>
-    <dependency.jackson-core-databind>2.18.3</dependency.jackson-core-databind>
+    <dependency.avaje>5.2</dependency.avaje>
+    <dependency.aws>2.59.1</dependency.aws>
+    <dependency.aws-crt>0.50.0</dependency.aws-crt>
+    <dependency.junit-jupiter>6.1.3</dependency.junit-jupiter>
+    <dependency.logback>1.6.7</dependency.logback>
+    <dependency.slf4j>2.0.20</dependency.slf4j>
+    <dependency.jackson-core-databind>2.23.0</dependency.jackson-core-databind>
 
     <!-- Test -->
     <dependency.junit-jupiter>5.12.1</dependency.junit-jupiter>
-    <dependency.mockito>5.16.1</dependency.mockito>
-    <dependency.mockwebserver>4.12.0</dependency.mockwebserver>
-    <dependency.s3mock>3.12.0</dependency.s3mock>
-    <dependency.testcontainers>1.21.4</dependency.testcontainers>
+    <dependency.mockito>5.24.0</dependency.mockito>
+    <dependency.mockwebserver>5.5.1</dependency.mockwebserver>
+    <dependency.s3mock>5.2.3</dependency.s3mock>
+    <dependency.testcontainers>2.0.5</dependency.testcontainers>
   </properties>
 
   <dependencyManagement>
